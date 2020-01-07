@@ -1,10 +1,11 @@
+import java.util.Arrays;
+
 public class ArrayReverse {
     public static void main(String[] args) {
-        int[] arr = { 5, 4, 3, 2, 1 };
-        reverseArray(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
+        int[] startArr = new int[] { 1, 2, 3, 4, 5, 10 };
+        System.out.println(Arrays.toString(startArr));
+        int[] endArr = reverseArray(startArr);
+        System.out.println(Arrays.toString(endArr));
     }
 
     public static int[] reverseArray(int[] array) {
