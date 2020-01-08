@@ -7,6 +7,9 @@ Function must insert value argument into the middle of argument array and return
 ## Approach & Efficiency
 Midpoint of incoming array found, new array created with lenght + 1 of previousw array, in a for loop values are compared and sorted depending on pre-midpoint, midpoint, and post-midpoint location and then inserted in respective locations. Resulting array is returned.
 
+## Code
+[Array Shift Code](code401challenges/src/main/java/code401challenges/Library.java)
+
 ## Solution
 ![array-shift WB](assets/array-shift.jpg)
 
