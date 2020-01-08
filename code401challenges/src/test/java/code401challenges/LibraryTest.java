@@ -8,18 +8,19 @@ import static org.junit.Assert.*;
 
 public class LibraryTest {
 
-
     @Test public void testInsertShiftArray() {
-        int[] expected = {4, 8, 15, 16, 23, 42};
-        int[] testArray = {4, 8, 15, 23, 42};
+        // Test with uneven length array
+        int[] expected = { 4, 8, 15, 16, 23, 42 };
+        int[] testArray = { 4, 8, 15, 23, 42 };
         int numToInsert = 16;
-        int [] actual = Library.insertShiftArray(testArray, numToInsert);
+        int[] actual = Library.insertShiftArray(testArray, numToInsert);
         assertArrayEquals(expected, actual);
 
-        int[] expected2 = {2, 4, 5, 6, 8};
-        int[] testArray2 = {2, 4, 6, 8};
+        // Test with even length array
+        int[] expected2 = { 2, 4, 5, 6, 8 };
+        int[] testArray2 = { 2, 4, 6, 8 };
         int numToInsert2 = 5;
-        int [] actual2 = Library.insertShiftArray(testArray2, numToInsert2);
+        int[] actual2 = Library.insertShiftArray(testArray2, numToInsert2);
         assertArrayEquals(expected2, actual2);
     }
 }
