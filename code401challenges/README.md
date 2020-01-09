@@ -9,6 +9,7 @@ Midpoint of incoming array found, new array created with lenght + 1 of previousw
 
 ## Code
 [Array Shift Code](src/main/java/code401challenges/Library.java)
+![Array Shift WB](assets/array-shift.jpg)
 
 
 # Binary Search
@@ -21,7 +22,7 @@ Function must search in the array passed as argument for value passed as argumen
 declare 3 variables, start, middle, and end points that will be modified as the while loop performs the search, the loop will only look for a single condition to end. The search will split the array in halves and search the halves depending on the range of numbers and where the passed in value would fall within the halves.
 
 ## Solution
-[Binary Search](/src/main/java/code401challenges/BinarySearch.java)
+[Binary Search Code](/src/main/java/code401challenges/BinarySearch.java)
 ![binary-search WB](assets/binary-search.jpg)
 
 
