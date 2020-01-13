@@ -9,6 +9,7 @@ Created nested Node class within LinkedList, accepted values are generic to allo
 
 ## API
 [LinkedList Code](src/main/java/linkedList/LinkedList.java)
+
 insert() -> Allows for the insertion of a node of any type into the linked list
 includes() -> Searches across the linked list for the value in the argument, returns true if contained, false if not.
 toString() -> Returns the string representation of the contents of the linked list.
