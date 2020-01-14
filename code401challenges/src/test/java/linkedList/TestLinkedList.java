@@ -72,7 +72,8 @@ public class TestLinkedList {
         expected.insert(100);
         expected.insert(200);
         expected.append(355);
-        System.out.println(expected.toString());
+        //System.out.println(expected.toString());
+        //System.out.println(expected.toStringTest());
         String expectedString = "{ 200 } -> { 100 } -> { 355 } -> NULL";
         assertTrue(expectedString.equals(expected.toString()));
     }

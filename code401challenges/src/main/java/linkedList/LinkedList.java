@@ -1,6 +1,7 @@
 package linkedList;
 
 import java.io.*;
+import java.util.StringJoiner;
 
 public class LinkedList<E> {
 
@@ -47,6 +48,24 @@ public class LinkedList<E> {
         return false;
     }
 
+
+    public  String toStringTest()
+    {
+        StringJoiner returnedString = new StringJoiner("}{", "{", "") ;
+          Node<E> current_Node = head;
+         while (current_Node != null)
+         {
+             //returnedString.add("{ ");
+             String dataAsText = current_Node.node_Data.toString();
+             returnedString.add(dataAsText);
+             returnedString.add( "} -> ");
+         if(current_Node.next_Node == null){
+           returnedString.add( " } -> NULL");
+          }
+         current_Node = current_Node.next_Node;
+          }
+          return returnedString.toString();
+    }
 
     public  String toString() {
         String returnedString = "";
