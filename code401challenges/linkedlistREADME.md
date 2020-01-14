@@ -10,6 +10,14 @@ Created nested Node class within LinkedList, accepted values are generic to allo
 ## API
 [LinkedList Code](src/main/java/linkedList/LinkedList.java)
 
-insert() -> Allows for the insertion of a node of any type into the linked list
-includes() -> Searches across the linked list for the value in the argument, returns true if contained, false if not.
+insert(value) -> Allows for the insertion of a node of any type into the linked list
+
+includes(value) -> Searches across the linked list for the value in the argument, returns true if contained, false if not.
+
 toString() -> Returns the string representation of the contents of the linked list.
+
+append(value) -> Adds node with value as data to the end of the list.
+
+insertBefore(value, newValue) -> Adds a node with newValue as its data before the node containing value.
+
+insertAfter(value, newValue) -> Adds a node with newValue as its value after the node containing value as its data.
