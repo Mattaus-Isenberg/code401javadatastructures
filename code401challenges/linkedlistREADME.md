@@ -21,3 +21,6 @@ append(value) -> Adds node with value as data to the end of the list.
 insertBefore(value, newValue) -> Adds a node with newValue as its data before the node containing value.
 
 insertAfter(value, newValue) -> Adds a node with newValue as its value after the node containing value as its data.
+
+![LinkedList WB](assets/ll-Board.jpg)
+![LinkedList WB](assets/ll-algorithm.jpg)
