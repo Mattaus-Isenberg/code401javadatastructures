@@ -129,6 +129,7 @@ public class LinkedList<E> {
            place_Holder = transitory_Node.next_Node;
            transitory_Node.next_Node = new Node(newValue, place_Holder);
        }
+        throw new IllegalArgumentException("Element does not exist");
     }
 
     public void insertAfter(E valToInsertAfter, E newValue)
@@ -151,6 +152,7 @@ public class LinkedList<E> {
                 place_Holder = transitory_Node.next_Node;
                 transitory_Node.next_Node = new Node(newValue, place_Holder);
             }
+        throw new IllegalArgumentException("Element does not exist");
     }
 
 
