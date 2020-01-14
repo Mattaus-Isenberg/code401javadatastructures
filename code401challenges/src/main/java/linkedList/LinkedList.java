@@ -109,7 +109,6 @@ public class LinkedList<E> {
 
            place_Holder = transitory_Node.next_Node;
            transitory_Node.next_Node = new Node(newValue, place_Holder);
-           //transitory_Node.next_Node.next_Node = place_Holder;
        }
     }
 
@@ -122,7 +121,6 @@ public class LinkedList<E> {
         {
             place_Holder = transitory_Node.next_Node;
             transitory_Node.next_Node = new Node(newValue, place_Holder);
-            //transitory_Node.next_Node.next_Node = place_Holder;
         }
         else
             {
@@ -133,7 +131,6 @@ public class LinkedList<E> {
 
                 place_Holder = transitory_Node.next_Node;
                 transitory_Node.next_Node = new Node(newValue, place_Holder);
-                //transitory_Node.next_Node.next_Node = place_Holder;
             }
     }
 
