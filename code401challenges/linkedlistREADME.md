@@ -22,5 +22,5 @@ insertBefore(value, newValue) -> Adds a node with newValue as its data before th
 
 insertAfter(value, newValue) -> Adds a node with newValue as its value after the node containing value as its data.
 
-![LinkedList WB](assets/ll-Board.jpg)
-![LinkedList WB](assets/ll-algorithm.jpg)
+![LinkedList Board](assets/ll-Board.jpg)
+![LinkedList Algorithm](assets/ll-algorithm.jpg)
