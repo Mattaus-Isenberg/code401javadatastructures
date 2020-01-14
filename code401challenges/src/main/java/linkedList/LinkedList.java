@@ -37,9 +37,10 @@ public class LinkedList<E> {
 
         while(node != null)
         {
-            if(node.node_Data.equals(data)){
+            if(node.node_Data.equals(data))
+            {
                 return true;
-        }
+            }
             node = node.next_Node;
 
     }
@@ -78,6 +79,63 @@ public class LinkedList<E> {
       //  }
       //  return returnedString.toString();
         }
+
+    public void append(E data)
+    {
+        Node<E> transitory_Node = this.head;
+        while(transitory_Node.next_Node != null)
+        {
+            transitory_Node = transitory_Node.next_Node;
+        }
+
+        transitory_Node.next_Node = new Node<>(data);
+    }
+
+    public void insertBefore(E valToInsertBefore, E newValue)
+    {
+       if(this.head.node_Data.equals(valToInsertBefore))
+       {
+           insert(newValue);
+       }
+       else
+       {
+           Node<E> transitory_Node = this.head;
+           Node<E> place_Holder;
+
+           while(transitory_Node.next_Node.node_Data != valToInsertBefore)
+           {
+               transitory_Node = transitory_Node.next_Node;
+           }
+
+           place_Holder = transitory_Node.next_Node;
+           transitory_Node.next_Node = new Node(newValue, place_Holder);
+           //transitory_Node.next_Node.next_Node = place_Holder;
+       }
+    }
+
+    public void insertAfter(E valToInsertAfter, E newValue)
+    {
+        Node<E> transitory_Node = this.head;
+        Node<E> place_Holder;
+
+        if(transitory_Node.node_Data.equals(valToInsertAfter))
+        {
+            place_Holder = transitory_Node.next_Node;
+            transitory_Node.next_Node = new Node(newValue, place_Holder);
+            //transitory_Node.next_Node.next_Node = place_Holder;
+        }
+        else
+            {
+                while(transitory_Node.node_Data != valToInsertAfter)
+                {
+                    transitory_Node = transitory_Node.next_Node;
+                }
+
+                place_Holder = transitory_Node.next_Node;
+                transitory_Node.next_Node = new Node(newValue, place_Holder);
+                //transitory_Node.next_Node.next_Node = place_Holder;
+            }
+    }
 
 
 }
