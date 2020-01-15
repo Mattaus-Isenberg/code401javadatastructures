@@ -102,6 +102,7 @@ public class LinkedList<E> {
     public void append(E data)
     {
         Node<E> transitory_Node = this.head;
+
         while(transitory_Node.next_Node != null)
         {
             transitory_Node = transitory_Node.next_Node;
@@ -129,7 +130,6 @@ public class LinkedList<E> {
            place_Holder = transitory_Node.next_Node;
            transitory_Node.next_Node = new Node(newValue, place_Holder);
        }
-        throw new IllegalArgumentException("Element does not exist");
     }
 
     public void insertAfter(E valToInsertAfter, E newValue)
@@ -152,10 +152,41 @@ public class LinkedList<E> {
                 place_Holder = transitory_Node.next_Node;
                 transitory_Node.next_Node = new Node(newValue, place_Holder);
             }
-        throw new IllegalArgumentException("Element does not exist");
     }
 
 
+    public E kthFromEnd(int k)
+    {
+        Node<E> current_Node = this.head;
+        Node<E> transitory_Node = this.head;
+        int place_Count = 0;
+
+        if(k < 0)
+        {
+            throw new IllegalArgumentException("Negative numbers not allowed");
+        }
+        else if(current_Node == null)
+        {
+            throw new IllegalArgumentException("Element out of bounds");
+        }
+
+        while(current_Node.next_Node != null)
+        {
+            current_Node = current_Node.next_Node;
+            place_Count++;
+
+            if(place_Count > k)
+            {
+                transitory_Node = transitory_Node.next_Node;
+            }
+        }
+
+        if(place_Count < k)
+        {
+            throw new IllegalArgumentException("Element out of bounds");
+        }
+        return transitory_Node.node_Data;
+    }
 }
 
 
