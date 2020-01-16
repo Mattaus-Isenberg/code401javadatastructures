@@ -247,5 +247,7 @@ public class TestLinkedList {
         System.out.println(list_Two.toString());
 
         System.out.println(LinkedList.mergeLists(list_One, list_Two).toString());
+
+        assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL", LinkedList.mergeLists(list_One, list_Two).toString() );
     }
 }

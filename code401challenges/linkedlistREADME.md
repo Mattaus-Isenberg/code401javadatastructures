@@ -24,6 +24,10 @@ insertAfter(value, newValue) -> Adds a node with newValue as its value after the
 
 kthFromEnd(int k) -> Takes an int as location k from end and returns the nodes data from the node at that index. 
 
+mergeLists(LinkedList list_One_Argument, LinkedList list_Two_Argument) -> Takes 2 Linked lists and returns one linked list with the contents of both zipped up.
+
 ![LinkedList Board](assets/ll-Board.jpeg)
 
 ![LinkedList Algorithm](assets/ll-algorithm.jpg)
+
+![LinkedList Merge](assets/ll-merge.jpg)
