@@ -1,6 +1,8 @@
 package linkedList;
 
 import org.junit.Test;
+
+import static linkedList.LinkedList.mergeLists;
 import static org.junit.Assert.*;
 
 public class TestLinkedList {
@@ -230,4 +232,22 @@ public class TestLinkedList {
         assertEquals(3, actual );
     }
 
+
+    @Test public void mergeListTest()
+    {
+        LinkedList list_One = new LinkedList();
+        list_One.insert(2);
+        list_One.insert(3);
+        list_One.insert(1);
+        System.out.printf(list_One.toString());
+        LinkedList list_Two = new LinkedList();
+        list_Two.insert(4);
+        list_Two.insert(9);
+        list_Two.insert(5);
+        System.out.println(list_Two.toString());
+
+        System.out.println(LinkedList.mergeLists(list_One, list_Two).toString());
+
+        assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL", LinkedList.mergeLists(list_One, list_Two).toString() );
+    }
 }

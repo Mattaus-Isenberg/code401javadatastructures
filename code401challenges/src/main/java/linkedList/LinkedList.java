@@ -187,6 +187,24 @@ public class LinkedList<E> {
         }
         return transitory_Node.node_Data;
     }
+
+    public static LinkedList mergeLists(LinkedList list_One_Argument, LinkedList list_Two_Argument)
+    {
+        Node list_One_Current = list_One_Argument.head;
+        Node list_Two_Current = list_Two_Argument.head;
+
+
+        while (list_One_Current != null && list_Two_Current != null)
+        {
+            list_Two_Argument.head = list_Two_Current.next_Node;
+            list_Two_Current.next_Node = list_One_Current.next_Node;
+            list_One_Current.next_Node = list_Two_Current;
+            list_One_Current = list_Two_Current.next_Node;
+            list_Two_Current = list_Two_Argument.head;
+        }
+        return list_One_Argument;
+    }
+
 }
 
 
