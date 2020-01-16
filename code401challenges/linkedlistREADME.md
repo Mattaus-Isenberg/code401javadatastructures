@@ -22,6 +22,8 @@ insertBefore(value, newValue) -> Adds a node with newValue as its data before th
 
 insertAfter(value, newValue) -> Adds a node with newValue as its value after the node containing value as its data.
 
+kthFromEnd(int k) -> Takes an int as location k from end and returns the nodes data from the node at that index. 
+
 ![LinkedList Board](assets/ll-Board.jpeg)
 
 ![LinkedList Algorithm](assets/ll-algorithm.jpg)
