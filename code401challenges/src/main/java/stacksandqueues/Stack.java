@@ -2,6 +2,7 @@ package stacksandqueues;
 
 import linkedList.LinkedList;
 
+import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
 public class Stack<E>
@@ -29,7 +30,7 @@ public class Stack<E>
     {
         if(top == null)
         {
-            throw new NoSuchElementException();
+            throw new EmptyStackException();
         }
         else
         {
@@ -41,6 +42,8 @@ public class Stack<E>
 
     public E peek()
     {
+        if(top == null)
+            throw new EmptyStackException();
         return top.node_Data;
     }
 
