@@ -33,6 +33,9 @@ public class Queue<E>
 
     public E dequeue()
     {
+        if(front == null)
+            throw new NoSuchElementException();
+
         E return_Data = front.node_Data;
         front = front.next_Node;
         if (isEmpty())
