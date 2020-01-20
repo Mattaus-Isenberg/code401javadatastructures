@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class QueueTest
+public class QueueTest<E>
 {
 
     private Object NullPointerException;
@@ -64,13 +64,13 @@ public class QueueTest
         expected.dequeue();
         expected.dequeue();
         expected.dequeue();
-        assertEquals(NullPointerException, expected.front);
+        assertEquals(null, expected.front);
     }
 
     @Test
     public void isEmpty()
     {
-        Queue expected = new Queue();
+        Queue<E> expected = new Queue<>();
         assertEquals(NullPointerException, expected.front);
     }
 }

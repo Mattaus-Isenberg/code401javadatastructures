@@ -1,9 +1,6 @@
 package stacksandqueues;
 
-import linkedList.LinkedList;
-
 import java.util.EmptyStackException;
-import java.util.NoSuchElementException;
 
 public class Stack<E>
 {
