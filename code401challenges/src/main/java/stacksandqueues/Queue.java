@@ -45,6 +45,8 @@ public class Queue<E>
 
     public E peek()
     {
+        if(front == null)
+            throw new NullPointerException();
         return front.node_Data;
     }
 
