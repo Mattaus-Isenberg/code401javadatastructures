@@ -8,7 +8,7 @@ public class Queue<E>
     Node<E> back;
     int length;
 
-    public Queue()
+    public Queue(   )
     {
         this.front = null;
         this.back = null;
@@ -45,6 +45,8 @@ public class Queue<E>
 
     public E peek()
     {
+        if(front == null)
+            throw new NullPointerException();
         return front.node_Data;
     }
 
