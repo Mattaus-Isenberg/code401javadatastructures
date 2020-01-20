@@ -3,7 +3,8 @@ package linkedList;
 import java.io.*;
 import java.util.StringJoiner;
 
-public class LinkedList<E> {
+public class LinkedList<E>
+{
 
     Node<E> head;
 
