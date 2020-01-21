@@ -35,16 +35,4 @@ class PseudoQueue<E>
         return back_Value;
     }
 
-    public static void main(String[] args) {
-        int[] keys = { 1, 2, 3, 4, 5 };
-        PseudoQueue pqueue = new PseudoQueue<>();
-
-        // insert above keys into the queue
-        for (int key : keys) {
-            pqueue .enqueue(key);
-        }
-
-        System.out.println(pqueue.dequeue());	// print 1
-        System.out.println(pqueue.dequeue());	// print 2
-    }
 }
