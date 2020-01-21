@@ -21,7 +21,7 @@ Queues O-1
 PseudoQueue
 
 ## CODE
-[All classes](code401challenges/src/main/java/stacksandqueues/)
+[All classes](/code401challenges/src/main/java/stacksandqueues/)
 
 ## API
 Node implements a next_Node and a node_Data properties.
