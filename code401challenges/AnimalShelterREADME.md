@@ -9,5 +9,5 @@ enqueue(Animal animal) -> takes an animal as argument, and depending on animal c
 dequeue(Class pref) -> takes an animal class preference as argument and returns a generic (cat or dog) based on input. 
 
 ## Solution
-[Animal Shelter Code](code401challenges/src/main/java/utilities/AnimalShelter.java)
+[Animal Shelter Code](/code401challenges/src/main/java/utilities/AnimalShelter.java)
 ![Animal Shelter WB](assets/animal-shelter.jpg)
