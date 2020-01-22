@@ -11,4 +11,4 @@ dequeue(Class pref) -> takes an animal class preference as argument and returns 
 ## Solution
 [Animal Shelter Code](/code401challenges/src/main/java/utilities/AnimalShelter.java)
 
-![Animal Shelter WB](/code401challenges/assets/animal-shelter.jpg)
+![Animal Shelter WB](/assets/animal-shelter.jpg)
