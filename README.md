@@ -5,3 +5,4 @@
 2. [Binary Search](/code401challenges/binaryREADME.md)
 3. [Linked List](code401challenges/linkedlistREADME.md)
 4. [Stacks and Queues](code401challenges/STACKSNQUEUESREADME.md)
+5. [Animal Shelter](code401challenges/AnimalShelterREADME.md)
