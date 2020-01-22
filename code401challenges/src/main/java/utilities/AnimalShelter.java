@@ -25,11 +25,11 @@ public class AnimalShelter<E>
     public <E> E dequeue(Class<E> pref)
     {
         if(pref.equals(Hunde.class))
-            return pref.cast(hunde_Haus.dequeue());
+            return (E)hunde_Haus.dequeue();
 
 
         if(pref.equals(Katze.class))
-            return pref.cast(katzen_Haus.dequeue());
+            return (E)katzen_Haus.dequeue();
 
         return null;
 
