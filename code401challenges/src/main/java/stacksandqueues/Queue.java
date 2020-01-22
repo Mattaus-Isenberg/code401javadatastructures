@@ -8,7 +8,7 @@ public class Queue<E>
     Node<E> back;
     int length;
 
-    public Queue(   )
+    public Queue()
     {
         this.front = null;
         this.back = null;
@@ -58,5 +58,10 @@ public class Queue<E>
         if(front == null)
             return true;
         return false;
+    }
+
+    public int getLength()
+    {
+        return length;
     }
 }
