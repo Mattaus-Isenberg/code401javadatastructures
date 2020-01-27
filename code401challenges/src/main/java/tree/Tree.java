@@ -58,6 +58,6 @@ public class Tree
     public Object[] postOrder()
     {
         ArrayList<Integer> return_Array = new ArrayList<Integer>();
-        return inOrder(this.root_Node, return_Array).toArray();
+        return postOrder(this.root_Node, return_Array).toArray();
     }
 }
