@@ -7,8 +7,11 @@ Binary search tree will add values properly and into respective expected side of
 
 ## Challenge
 Create 3 classes
+
 Node - provides initial structure for the BinarySearchTree to implement. Aware of left, and right nodes, as well as its data.
+
 Tree - provides class that implements root_Node as well as a preOder(), inOrder, and postOrder() methods that will return arrays with data sorted in expected order of each. This class is also the superClass for the BinarySearchTree class.
+
 BinarySearchTree - Provides a method for adding values add() as well as to determine if a value is part of the tree contains().
 
 ## Approach & Efficiency
