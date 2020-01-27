@@ -1,20 +1,21 @@
 package stacksandqueues;
 
-
-
-class Node<E>
+public class Node<E>
 {
     public E node_Data;
     public Node next_Node;
+
 
     Node(E data)
     {
         this(data, null);
     }
 
-    Node(E data, Node next)
+    Node(E data, Node next_Node)
     {
-        node_Data = data;
-        next_Node = next;
+        this.node_Data = data;
+        this.next_Node = next_Node;
     }
 }
+
+
