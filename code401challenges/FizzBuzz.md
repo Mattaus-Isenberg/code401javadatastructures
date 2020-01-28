@@ -7,6 +7,6 @@ Create a method that will receive a tree as an argument, iterate over it, find v
 ## Approach & Efficiency
 The method takes a Tree, returns a Tree with values modified on nodes matching criteria. Makes use of recursion to iterate over the Tree nodes, if a value is divisible by 15 it matches 3 and 5, 5, or 3 it will replace the respective value with FizzBuzz, Fizz, or Buzz. Returns the modified Tree.
 ## Solution
-[Multi FizzBuzz Code](/code401challenges/src/main/java/utilities/FizzBuzzTree.java)
+[FizzBuzz Code](/code401challenges/src/main/java/utilities/FizzBuzzTree.java)
 
 ![FizzBuzz WB](./assets/FizzBuzz.jpg)
