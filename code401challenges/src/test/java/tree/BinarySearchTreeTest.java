@@ -34,9 +34,9 @@ public class BinarySearchTreeTest
         expectedTree.add(6);
 
 
-        assertTrue(5 == expectedTree.root_Node.node_Data);
-        assertTrue(4 == expectedTree.root_Node.left_Node.node_Data);
-        assertTrue(6 == expectedTree.root_Node.right_Node.node_Data);
+        assertTrue(5 == (Integer)expectedTree.root_Node.node_Data);
+        assertTrue(4 == (Integer)expectedTree.root_Node.left_Node.node_Data);
+        assertTrue(6 == (Integer)expectedTree.root_Node.right_Node.node_Data);
 
     }
 

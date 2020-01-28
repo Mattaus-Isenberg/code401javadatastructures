@@ -1,6 +1,6 @@
 package tree;
 
-public class BinarySearchTree extends Tree
+public class BinarySearchTree<E> extends Tree
 {
 
     private Node add(Node node, int data)
@@ -10,10 +10,10 @@ public class BinarySearchTree extends Tree
             node = new Node(data);
         }
 
-        if(data < node.node_Data)
+        if(data < (Integer)node.node_Data)
             node.left_Node = add(node.left_Node, data);
 
-        if(data > node.node_Data)
+        if(data > (Integer) node.node_Data)
             node.right_Node = add(node.right_Node, data);
 
         return node;
@@ -31,10 +31,10 @@ public class BinarySearchTree extends Tree
             if (node == null)
                 return false;
 
-            if (node.node_Data == data)
+            if ((Integer)node.node_Data == data)
                 return true;
 
-            return data < root_Node.node_Data ? contains(node.left_Node, data) : contains(node.right_Node, data);
+            return data < (Integer)root_Node.node_Data ? contains(node.left_Node, data) : contains(node.right_Node, data);
     }
 
     public boolean contains(int data)
