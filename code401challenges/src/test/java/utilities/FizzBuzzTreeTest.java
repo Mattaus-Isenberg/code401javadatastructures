@@ -8,27 +8,27 @@ import static org.junit.Assert.*;
 
 public class FizzBuzzTreeTest
 {
-    BinarySearchTree<Object> inputTree;
+    BinarySearchTree<Object> input_Tree;
 
     @Before
     public void setup()
     {
-        inputTree = new BinarySearchTree<>();
-        inputTree.add(5);
-        inputTree.add(15);
-        inputTree.add(20);
-        inputTree.add(1);
-        inputTree.add(12);
-        inputTree.add(27);
-        inputTree.add(57);
+        input_Tree = new BinarySearchTree<>();
+        input_Tree.add(5);
+        input_Tree.add(15);
+        input_Tree.add(20);
+        input_Tree.add(1);
+        input_Tree.add(12);
+        input_Tree.add(27);
+        input_Tree.add(57);
 
-        inputTree.preOrder();
+        input_Tree.preOrder();
     }
 
     @Test
     public void fizzBuzzTree()
     {
-        Tree actual_Tree = FizzBuzzTree.FizzBuzzTree(inputTree);
+        Tree actual_Tree = FizzBuzzTree.FizzBuzzTree(input_Tree);
 
         assertEquals("Buzz", actual_Tree.getRoot_Node().node_Data);
         assertEquals("FizzBuzz", actual_Tree.getRoot_Node().right_Node.node_Data);
