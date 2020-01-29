@@ -2,7 +2,6 @@ package tree;
 import stacksandqueues.Queue;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class BinarySearchTree<E> extends Tree
