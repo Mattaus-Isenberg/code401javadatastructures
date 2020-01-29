@@ -92,4 +92,21 @@ public class BinarySearchTreeTest
         assertEquals(Arrays.toString(expected), Arrays.toString(actualTree.postOrder()));
     }
 
+    @Test
+    public void breadthFirstTest()
+    {
+        BinarySearchTree actual_Tree = new BinarySearchTree();
+        int[] expected = new int[]{6, 4, 8, 3, 5, 7, 9};
+
+
+        actual_Tree.add(6);
+        actual_Tree.add(4);
+        actual_Tree.add(8);
+        actual_Tree.add(3);
+        actual_Tree.add(5);
+        actual_Tree.add(7);
+        actual_Tree.add(9);
+
+        assertEquals(Arrays.toString(expected), Arrays.toString(actual_Tree.breadthFirst().toArray()));
+    }
 }

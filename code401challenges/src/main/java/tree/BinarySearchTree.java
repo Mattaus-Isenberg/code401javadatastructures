@@ -1,4 +1,9 @@
 package tree;
+import stacksandqueues.Queue;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 public class BinarySearchTree<E> extends Tree
 {
@@ -42,6 +47,36 @@ public class BinarySearchTree<E> extends Tree
         return contains(root_Node, data);
     }
 
+    private ArrayList<Integer> breadthFirst(Node node, ArrayList<Integer> list)
+    {
+        if(node == null)
+            return null;
 
+
+        Queue<Node> node_Queue = new Queue<>();
+        node_Queue.enqueue(node);
+
+        while (node_Queue.peek() != null)
+        {
+            Node holder = node_Queue.dequeue();
+
+            list.add((Integer)holder.node_Data);
+
+            if(node.left_Node != null)
+                node_Queue.enqueue(holder.left_Node);
+
+
+            if(node.right_Node != null)
+                node_Queue.enqueue(holder.right_Node);
+
+        }
+        return list;
+    }
+
+    public ArrayList<Integer> breadthFirst()
+    {
+        ArrayList<Integer> returned_List = new ArrayList<>();
+        return breadthFirst(this.root_Node, returned_List);
+    }
 
 }
