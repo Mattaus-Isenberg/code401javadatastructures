@@ -25,6 +25,9 @@ BinarySearchTree O-1
 ## CODE
 [All classes](/code401challenges/src/main/java/tree/)
 
+## WB 
+![Breadth First WB](/assets/breadthfirst.jpg)
+
 ## API
 Node implements a left_Node, right_Node and a node_Data properties.
 
@@ -49,3 +52,4 @@ enqueue(E data) -> adds a new node with passed in data from the front of the Que
 
 dequeue() -> making use of recurssion removes the last node and returns the nodes data. 
 
+breadthFirst() -> makes use of a while loop to return a list of the values in the tree by row.
