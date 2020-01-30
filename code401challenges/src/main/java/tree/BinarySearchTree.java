@@ -78,4 +78,28 @@ public class BinarySearchTree<E> extends Tree
         return breadthFirst(this.root_Node, returned_List);
     }
 
+    private int findMaxValue(Node node, int max_Value)
+    {
+        if(node == null)
+            return max_Value;
+
+        max_Value = (int)node.node_Data;
+        int left_Branch = findMaxValue(node.left_Node, max_Value);
+        int right_Branch = findMaxValue(node.right_Node, max_Value);
+
+        if((int)left_Branch > max_Value)
+            max_Value =  left_Branch;
+
+        if((int)right_Branch > max_Value)
+            max_Value = right_Branch;
+
+        return max_Value;
+    }
+
+
+    public int findMaxValue()
+    {
+        int max_Value = Integer.MIN_VALUE;
+        return findMaxValue(this.root_Node, max_Value);
+    }
 }
