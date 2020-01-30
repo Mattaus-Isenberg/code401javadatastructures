@@ -55,7 +55,7 @@ public class BinarySearchTree<E> extends Tree
         Queue<Node> node_Queue = new Queue<>();
         node_Queue.enqueue(node);
 
-        while (node_Queue.peek() != null)
+        while (node_Queue.peek() != null )
         {
             Node holder = node_Queue.dequeue();
 

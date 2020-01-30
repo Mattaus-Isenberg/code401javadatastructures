@@ -109,4 +109,13 @@ public class BinarySearchTreeTest
 
         assertEquals(Arrays.toString(expected), Arrays.toString(actual_Tree.breadthFirst().toArray()));
     }
+
+    @Test
+    public void breadthFirstTestEmptyTree()
+    {
+        BinarySearchTree actual_Tree = new BinarySearchTree();
+
+
+        assertEquals(null, actual_Tree.breadthFirst());
+    }
 }

@@ -4,6 +4,7 @@ import java.util.NoSuchElementException;
 
 public class Queue<E>
 {
+
     Node<E> front;
     Node<E> back;
     int length;
@@ -64,4 +65,5 @@ public class Queue<E>
     {
         return length;
     }
+
 }
