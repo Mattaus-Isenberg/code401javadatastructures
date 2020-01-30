@@ -28,6 +28,7 @@ BinarySearchTree O-1
 [All classes](/code401challenges/src/main/java/tree/)
 
 ## WB 
+![findMaxValue WB](/assets/findMaxValue.jpg)
 ![Breadth First WB](/assets/breadthfirst.jpg)
 
 ## API
