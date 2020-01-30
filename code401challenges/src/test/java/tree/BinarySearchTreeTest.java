@@ -118,4 +118,36 @@ public class BinarySearchTreeTest
 
         assertEquals(null, actual_Tree.breadthFirst());
     }
+
+    @Test
+    public void findMaxTest()
+    {
+        BinarySearchTree actualTree = new BinarySearchTree();
+
+        actualTree.add(6);
+        actualTree.add(4);
+        actualTree.add(3);
+        actualTree.add(5);
+        actualTree.add(8);
+        actualTree.add(7);
+        actualTree.add(11);
+
+        assertEquals(11, actualTree.findMaxValue());
+    }
+
+    @Test
+    public void findMaxTestRootHighestValue()
+    {
+        BinarySearchTree actualTree = new BinarySearchTree();
+
+        actualTree.add(20);
+        actualTree.add(4);
+        actualTree.add(3);
+        actualTree.add(5);
+        actualTree.add(8);
+        actualTree.add(7);
+        actualTree.add(11);
+
+        assertEquals(20, actualTree.findMaxValue());
+    }
 }

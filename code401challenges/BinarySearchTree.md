@@ -12,7 +12,9 @@ Node - provides initial structure for the BinarySearchTree to implement. Aware o
 
 Tree - provides class that implements root_Node as well as a preOder(), inOrder, and postOrder() methods that will return arrays with data sorted in expected order of each. This class is also the superClass for the BinarySearchTree class.
 
-BinarySearchTree - Provides a method for adding values add() as well as to determine if a value is part of the tree contains(), and one to return a list of the values in a tree by row called breadthFirst().
+BinarySearchTree - Provides a method for adding values add() as well as to determine if a value is part of the tree contains(), one to return a list of the values in a tree by row called breadthFirst(), and a method called findMaxValue() that returns the max value contained within the tree.
+
+
 
 ## Approach & Efficiency
 
@@ -50,6 +52,8 @@ contains(data) -> returns a boolean identifying if the passed in argument is con
 
 enqueue(E data) -> adds a new node with passed in data from the front of the Queue.
 
-dequeue() -> making use of recurssion removes the last node and returns the nodes data. 
+dequeue() -> making use of recursion removes the last node and returns the nodes data. 
 
 breadthFirst() -> makes use of a while loop to return a list of the values in the tree by row.
+
+findMaxValue() -> Makes use of recursion and returns the max value held within the tree, takings no arguments.
