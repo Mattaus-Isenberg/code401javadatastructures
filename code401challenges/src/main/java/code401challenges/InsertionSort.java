@@ -27,19 +27,5 @@ public class InsertionSort
         }
         return arr;
     }
-
-    public static void main(String[] args)
-    {
-        int[] testArray = {8,4,23,42,16,15};
-        System.out.println(Arrays.toString(insertionSort(testArray)));
-
-       // int[] reverseSorted = {20,18,12,8,5,-2};
-      //  System.out.println(Arrays.toString(insertionSort(reverseSorted)));
-
-      //  int[] fewUniques = {5,12,7,5,5,7};
-      //  System.out.println(Arrays.toString(insertionSort(fewUniques)));
-
-      //  int[] nearlySorted = {2,3,5,7,13,11};
-      //  System.out.println(Arrays.toString(insertionSort(nearlySorted)));
-    }
+    
 }
