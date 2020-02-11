@@ -8,3 +8,4 @@
 5. [Animal Shelter](code401challenges/AnimalShelterREADME.md)
 6. [Binary Search Tree](code401challenges/BinarySearchTree.md)
 7. [FizzBuzzTree](code401challenges/FizzBuzz.md)
+8. [InsertionSort](code401challenges/FizzBuzz.md)
