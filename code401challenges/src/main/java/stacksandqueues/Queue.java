@@ -56,7 +56,7 @@ public class Queue<E>
 
     public boolean isEmpty()
     {
-        if(front == null)
+        if(back == null)
             return true;
         return false;
     }

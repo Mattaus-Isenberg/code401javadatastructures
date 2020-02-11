@@ -5,6 +5,8 @@ import tree.*;
 
 public class FizzBuzzTree<E>
 {
+
+
     private static void FizzBuzzTree(Node<Object> node)
     {
         if(node != null)

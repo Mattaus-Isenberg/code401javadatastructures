@@ -1,4 +1,5 @@
 package tree;
+import code401challenges.BinarySearch;
 import stacksandqueues.Queue;
 
 import java.util.ArrayList;
@@ -78,28 +79,85 @@ public class BinarySearchTree<E> extends Tree
         return breadthFirst(this.root_Node, returned_List);
     }
 
-    private int findMaxValue(Node node, int max_Value)
+
+
+
+
+    private int findMaxValue(Node node)
     {
+        //if(node.left_Node == null && node.right_Node == null)
         if(node == null)
-            return max_Value;
+            return 0;
 
-        max_Value = (int)node.node_Data;
-        int left_Branch = findMaxValue(node.left_Node, max_Value);
-        int right_Branch = findMaxValue(node.right_Node, max_Value);
+        return Math.max((int)node.node_Data, Math.max(findMaxValue(node.right_Node), findMaxValue(node.left_Node)));
+        //max_Value = (int)node.node_Data;
+        //int left_Branch = findMaxValue(node.left_Node, max_Value);
+        //int right_Branch = findMaxValue(node.right_Node, max_Value);
 
-        if((int)left_Branch > max_Value)
-            max_Value =  left_Branch;
+        //if((int)left_Branch > max_Value)
+         //   max_Value =  left_Branch;
 
-        if((int)right_Branch > max_Value)
-            max_Value = right_Branch;
+        //if((int)right_Branch > max_Value)
+        //    max_Value = right_Branch;
 
-        return max_Value;
+        //return Math.max(node.value, Math.max(rightbranch, leftbranch))
+
+       // return max_Value;
     }
 
 
     public int findMaxValue()
     {
         int max_Value = Integer.MIN_VALUE;
-        return findMaxValue(this.root_Node, max_Value);
+        return findMaxValue(this.root_Node);
+    }
+
+
+
+
+    private int sumOfOdds(Node root, int odd_Sum)
+    {
+        if(root == null)
+            return odd_Sum;
+
+        if((int)root.node_Data % 2 != 0)
+        {
+            odd_Sum += (int) root.node_Data;
+        }
+
+        int left_Branch = sumOfOdds(root.left_Node, odd_Sum);
+        int right_Branch = sumOfOdds(root.right_Node, odd_Sum);
+
+        if((int)left_Branch % 2 != 0)
+            odd_Sum = left_Branch;
+
+        if((int)right_Branch % 2 != 0)
+            odd_Sum = right_Branch;
+
+        return odd_Sum;
+    }
+
+    public int sumOfOdds()
+    {
+        int odd_Sum = 0;
+        return sumOfOdds(this.root_Node, odd_Sum);
+    }
+
+    public static void main(String[] args)
+    {
+        BinarySearchTree test_Tree = new BinarySearchTree();
+        test_Tree.add(1);
+        test_Tree.add(2);
+        test_Tree.add(3);
+        test_Tree.add(4);
+        test_Tree.add(5);
+        test_Tree.add(6);
+        test_Tree.add(7);
+        test_Tree.add(8);
+        test_Tree.add(9);
+
+
+        System.out.println(test_Tree.sumOfOdds());
+
     }
 }

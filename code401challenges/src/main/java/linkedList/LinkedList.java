@@ -34,18 +34,18 @@ public class LinkedList<E>
     }
 
 
-    public boolean includes(E data){
+    public boolean includes(E data)
+    {
         Node<E> node = this.head;
 
         while(node != null)
         {
-            if(node.node_Data.equals(data))
+            if (node.node_Data.equals(data))
             {
                 return true;
             }
             node = node.next_Node;
-
-    }
+        }
         return false;
     }
 
@@ -204,6 +204,38 @@ public class LinkedList<E>
             list_Two_Current = list_Two_Argument.head;
         }
         return list_One_Argument;
+    }
+
+    private static Node mergeRec(Node one, Node two)
+    {
+        if(one == null) return two;
+        if(two == null) return one;
+
+        one.next_Node = mergeRec(two, one.next_Node);
+        return one;
+    }
+
+    public static LinkedList mergeRec(LinkedList one, LinkedList two)
+    {
+        one.head = mergeRec(one.head, two.head);
+        return one;
+    }
+
+    public static void main(String[] args)
+    {
+        LinkedList one = new LinkedList();
+        one.insert(5);
+        one.insert(3);
+        one.insert(1);
+
+        LinkedList two = new LinkedList();
+        two.insert(6);
+        two.insert(4);
+        two.insert(2);
+
+        LinkedList merged = mergeRec(one, two);
+
+        System.out.println(merged);
     }
 
 }
