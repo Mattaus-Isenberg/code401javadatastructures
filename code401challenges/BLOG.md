@@ -3,6 +3,9 @@
 ## Problem Domain
 Write a function that will order values in ascending order.
 
+## Code 
+[InsertionSort Code](code401challenges/InsertionSort.java)
+
 ## Pseudo
     InsertionSort(int[] arr)
   
