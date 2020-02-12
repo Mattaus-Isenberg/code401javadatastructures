@@ -49,10 +49,4 @@ public class MergeSort
         return arr;
     }
 
-    public static void main(String[] args)
-    {
-        int[] actual = {8,4,23,42,16,15};
-        System.out.println(Arrays.toString(mergeSort(actual)));
-    }
-
 }
