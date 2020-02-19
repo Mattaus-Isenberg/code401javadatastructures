@@ -44,7 +44,6 @@ public class Hashtable
     public String get(String key)
     {
         int hash = hash(key);
-        
         if (hash_Table[hash] != null)
         {
             HashNode temp = hash_Table[hash];
