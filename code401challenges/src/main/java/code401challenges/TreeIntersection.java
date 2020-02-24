@@ -1,5 +1,14 @@
 package code401challenges;
 
+import stacksandqueues.Node;
+import stacksandqueues.Stack;
+import tree.BinarySearchTree;
+import tree.Tree;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class TreeIntersection
 {
 //    Code Challenge
@@ -25,4 +34,50 @@ public class TreeIntersection
 //    Write at least three test assertions for each method that you define.
 //
 //    Ensure your tests are passing before you submit your solution.
+
+    public boolean someMethod(){return true;}
+
+    public ArrayList<Integer> compare(BinarySearchTree one, BinarySearchTree two)
+    {
+        ArrayList<Integer> sameValues = new ArrayList<>();
+        Stack<Node> myStack = new Stack<>();
+        HashSet<Integer> seeNums = new HashSet<>();
+
+        myStack.push(one.getRoot_Node());
+
+        while (!myStack.isEmpty())
+        {
+            Node temp = myStack.pop();
+            seeNums.add(temp.node_Data);
+            if(temp.left != null)
+            {
+                myStack.push(temp.left);
+            }
+            if(temp.right != null)
+            {
+                myStack.push(temp.right);
+            }
+        }
+
+        myStack.push(two.getRoot_Node());
+
+        while (!myStack.isEmpty())
+        {
+            Node temp = myStack.pop();
+            if(seeNums.contains(temp.value))
+            {
+                sameValues.add(temp.value)
+            }
+            if(temp.left != null)
+            {
+                myStack.push(temp.left);
+            }
+            if(temp.right != null)
+            {
+                myStack.push(temp.right);
+            }
+        }
+
+        return  sameValues;
+    }
 }
