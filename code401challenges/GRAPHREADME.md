@@ -44,3 +44,5 @@ Takes in a given node
 Include the weight of the connection in the returned collection
 Size()
 Returns the total number of nodes in the graph
+breadthFirst()
+returns list with graph ordered breadth first

@@ -108,4 +108,37 @@ public class Graph<T>
         return graph.isEmpty();
     }
 
+
+    public <T> List<Node<T>> BreadthFirst(Node node)
+        {
+            Set<Node> visited = new HashSet<>();
+            List<Node<T>> breadthFirst = new ArrayList<>();
+            List<Node<T>> result = new LinkedList<Node<T>>();
+
+            if (this.graph.isEmpty())
+            {
+                return result;
+            }
+
+            visited.add(node);
+            result.add(node);
+            breadthFirst.add(node);
+            while (!result.isEmpty())
+            {
+                result.remove(node);
+                if (!visited.contains(node))
+                {
+                    breadthFirst.add(node);
+                }
+                visited.add(node);
+                getNodes().forEach(neighbor -> {
+                    if (!visited.contains(neighbor))
+                    {
+                        result.add((Node<T>) neighbor);
+                    }
+                });
+            }
+            return breadthFirst;
+    }
+
 }
