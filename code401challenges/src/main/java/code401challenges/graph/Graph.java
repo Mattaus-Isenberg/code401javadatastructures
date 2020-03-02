@@ -4,27 +4,18 @@ import java.util.*;
 
 public class Graph<T>
 {
-    public static class Node<T>
+    public class Node<T>
     {
         T node_Data;
-        List<Edge<T>> neighbors;
+        public List<Edge<T>> edges = new LinkedList<>();
 
-        public Node()
-        {
-            this.neighbors = new LinkedList<>();
-        }
-
-        //overloaded for node data inclusion
-        public Node(T node_Data)
-        {
+        public Node(T node_Data) {
             this.node_Data = node_Data;
-            this.neighbors = new LinkedList<>();
         }
 
-        public boolean addEdge(Node<T> neighbor, Integer weight)
-        {
-            Edge<T> edge = new Edge(neighbor, weight);
-            return neighbors.add(edge);
+
+        public List<Edge<T>> getEdges() {
+            return edges;
         }
 
         public T getNode_Data()
@@ -33,79 +24,63 @@ public class Graph<T>
         }
     }
 
-    public static class Edge<T>
+    public  class Edge<T>
     {
-        public Node<T> getNeighbor() {
-            return neighbor;
-        }
+        public int weight;
+        public Node<T> nextNode;
 
-        public Node<T> neighbor;
-
-        public Integer getWeight() {
-            return weight;
-        }
-
-        Integer weight;
-
-        public Edge(Node<T> neighbor, Integer weight)
-        {
-            this.neighbor = neighbor;
+        public Edge(int weight, Node<T> nextNode) {
             this.weight = weight;
+            this.nextNode = nextNode;
         }
 
     }
 
-    public Set<Node<T>> graph;
+    ArrayList<Node<T>> vertices = new ArrayList<>();
 
-    public Graph()
+    public Graph(){ }
+
+    public Node<T> addNode(T node_Data)
     {
-        this.graph = new HashSet<>();
+        Node<T> newNode = new Node<>(node_Data);
+        vertices.add(newNode);
+        return  newNode;
     }
 
-    public boolean addNode(Node<T> node)
+    public void addEdge (Node<T> toNode, Node<T> fromNode, int weight)
     {
-        return graph.add(node);
+        Edge<T> newEdge = new Edge<>(weight,toNode);
+        Edge<T> newEdgeTwo = new Edge<>(weight,fromNode);
+        fromNode.edges.add(newEdge);
+        toNode.edges.add(newEdgeTwo);
     }
 
-    public boolean addEdge(Node<T> node_One, Node<T> node_Two, Integer weight)
-    {
-        Node test_One = node_One;
-        Node test_Two = node_Two;
-        Set node_Check = new HashSet<>();
-        node_Check.add(test_One);
-        node_Check.add(test_Two);
+    public int size(){
+        return vertices.size();
+    }
 
-        if(!graph.containsAll(node_Check))
-        {
-           return false;
+    public List<Node<T>> getNodes(){
+        if(vertices.size() == 0){
+            return null;
         }
-        node_One.addEdge(node_Two, weight);
-        node_Two.addEdge(node_One, weight);
-        return true;
+        return new LinkedList<>(vertices);
     }
 
-    public Set getNodes()
-    {
-        return this.graph;
-    }
-
-    public List<Edge<T>> getNeighbors(Node<T> node)
-    {
-        if(graph.contains(node))
-        {
-            return node.neighbors;
+    public Map<Node<T>, Integer> getNeighbors(Node<T> node){
+        Map<Node<T>, Integer> neighboringNodes = new HashMap<>();
+        if(node == null || node.edges == null){
+            return null;
         }
-        return new LinkedList<>();
+        for (Edge<T> neighbor: node.edges) {
+            neighboringNodes.put(neighbor.nextNode, neighbor.weight);
+        }
+        return neighboringNodes;
     }
 
-    public int size()
-    {
-        return graph.size();
-    }
 
     public boolean isEmpty()
     {
-        return graph.isEmpty();
+        return vertices.isEmpty();
     }
 
 
@@ -115,7 +90,7 @@ public class Graph<T>
             List<Node<T>> breadthFirst = new ArrayList<>();
             List<Node<T>> result = new LinkedList<Node<T>>();
 
-            if (this.graph.isEmpty())
+            if (this.vertices.isEmpty())
             {
                 return result;
             }
@@ -123,6 +98,7 @@ public class Graph<T>
             visited.add(node);
             result.add(node);
             breadthFirst.add(node);
+
             while (!result.isEmpty())
             {
                 result.remove(node);
