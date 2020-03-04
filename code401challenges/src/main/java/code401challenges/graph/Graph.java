@@ -117,4 +117,33 @@ public class Graph<T>
             return breadthFirst;
     }
 
+    public String getEdge(Graph<T> graph, String[] array)
+    {
+        int cost = 0;
+        String returnString = " ";
+        boolean connection = false;
+        for(int i = 0; i < array.length - 1; i++)
+        {
+            for(Node<T> node : graph.getNodes())
+            {
+                if(node.node_Data.equals(array[i]))
+                {
+                    for(Edge<T> edge : node.edges)
+                    {
+                        if (edge.nextNode.node_Data.equals(array[i + 1]))
+                        {
+                            cost += edge.weight;
+                            connection = true;
+                        } else
+                            {
+                            connection = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        return returnString + connection + " " + cost;
+    }
+
 }
